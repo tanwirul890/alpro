@@ -1,48 +1,49 @@
-// Source code is decompiled from a .class file using FernFlower decompiler (from Intellij IDEA).
 package seasson_3;
 
 import java.util.Scanner;
 
 public class ArrayMChar {
-   public ArrayMChar() {
-   }
 
-   public static void main(String[] args) {
-      Scanner sc = new Scanner(System.in);
-      int N = 5;
-      int[] a = new int[N];
-      int[] b = new int[N];
-      System.out.println("Array A");
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int N = 5;
+        int[] a = new int[N];
+        int[] b = new int[N];
 
-      int Sum;
-      for(Sum = 0; Sum < N; ++Sum) {
-         System.out.print("" + Sum + " input bil: ");
-         a[Sum] = sc.nextInt();
-      }
+        // Input dan cetak Array A
+        System.out.println("Array A:");
+        for (int i = 0; i < N; i++) {
+            System.out.print(i + " input bil: ");
+            a[i] = sc.nextInt();
+        }
 
-      for(Sum = 0; Sum < N; ++Sum) {
-         System.out.println("" + Sum + " " + a[Sum]);
-      }
+        System.out.println("Isi Array A:");
+        for (int i = 0; i < N; i++) {
+            System.out.println(i + " " + a[i]);
+        }
 
-      Sum = 0;
+        // Hitung total dan rata-rata Array A
+        int sumA = 0;
+        for (int i = 0; i < N; i++) {
+            sumA += a[i];
+        }
 
-      int i;
-      for(i = 0; i < N; ++i) {
-         Sum += a[i];
-      }
+        double rataA = (double) sumA / N;
+        System.out.println("Total isi array A = " + sumA);
+        System.out.println("Nilai rata-rata A = " + rataA);
 
-      System.out.println("Total isi array A= " + Sum);
-      System.out.println("Nilai rata A= " + (double)Sum / (double)N);
-      System.out.println("array B");
+        // Input dan cetak Array B
+        System.out.println("\nArray B:");
+        for (int i = 0; i < N; i++) {
+            System.out.print(i + " input bil: ");
+            b[i] = sc.nextInt();
+        }
 
-      for(i = 0; i < N; ++i) {
-         System.out.print("" + i + " input bil: ");
-         b[i] = sc.nextInt();
-      }
+        System.out.println("Isi Array B:");
+        for (int i = 0; i < N; i++) {
+            System.out.println(i + " " + b[i]);
+        }
 
-      for(i = 0; i < N; ++i) {
-         System.out.println("" + i + " " + b[i]);
-      }
-
-   }
+        sc.close();
+    }
 }
